@@ -1,0 +1,38 @@
+@page "/NomyApe"
+@{
+    var NomyApes = new List<NomyApe>();
+    NomyApes.Add(new NomyApe(1,"Nicolas","Ochoa"));
+    NomyApes.Add(new NomyApe(2,"Alan","Gomez"));
+    NomyApes.Add(new NomyApe(3,"Name","Surname"));
+    NomyApes.Add(new NomyApe(4,"Name","Surname"));
+    NomyApes.Add(new NomyApe(5,"Name","Surname"));
+    NomyApes.Add(new NomyApe(6,"Name","Surname"));
+    NomyApes.Add(new NomyApe(7,"Name","Surname"));
+}
+
+
+<div class="row">
+    <div class="rol">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col"># Registro</th>
+                    <th scope="col">Nombre</th>  
+                    <th scope="col">Apellido</th>  
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    foreach (var NomyApe in NomyApes)
+                    {
+                        <tr>
+                            <th>#@NomyApe.Id</th>
+                            <th>@NomyApe.Name</th>
+                            <th>@NomyApe.Surname</th>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
